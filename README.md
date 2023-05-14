@@ -1,3 +1,5 @@
+<div align = "center" style = "width: 10vh;"><img src = "aovent.png"></div>
+
 # web-music-player
 Music Player On Electron JS
 
