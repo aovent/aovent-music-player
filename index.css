@@ -120,3 +120,29 @@ main img {
 
     border-radius: 100px;
 }
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--submenus);
+    color: var(--text-first);
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color: var(--submenus);
+    color: var(--text-first);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: var(--submenus);
+    color: var(--text-first);
+}
+audio::-webkit-media-controls-timeline-container, video::-webkit-media-controls-timeline-container {
+    background-color: var(--submenus);
+    color: var(--text-first);
+}
+audio::-webkit-media-controls-current-time-display, audio::-webkit-media-controls-time-remaining-display {
+    color: var(--text-first);
+}
+audio::-webkit-media-controls-timeline, video::-webkit-media-controls-timeline {
+    background-color: var(--submenus);
+    color: var(--text-first);
+}
