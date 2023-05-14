@@ -1,2 +1,2 @@
 # web-music-player
-Musci Player On Electron JS
+Music Player On Electron JS
