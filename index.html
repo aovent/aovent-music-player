@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="renderer.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main>
+        <div class="logo">
+            <img src="aovent.png" draggable="false">
+        </div>
+
+        <div class="audio_div">
+            <audio src="folder/u-niteboi.mp3"></audio>
+
+            <div class="audio_name">U - NITEBOI</div>
+
+            <div class="control_buttons">
+                <button class = "play_button">Play</button>
+                <button class = "stop_button">Stop</button>
+                <button class = "repeat_button">Repeat</button>
+            </div>
+
+            <div class="audio_duration">
+                <span class = duration_scroller></span>
+            </div>
+        </div>
+
+        <div id = "container"></div>
+    </main>
+</body>
+
+</html>
