@@ -4,7 +4,7 @@ function createWindow() {
   const mainWindow = new BrowserWindow({
     width: 1200,
     height: 1200,
-    icon: "aovent.png",
+    icon: "src/img/aovent.png",
     webPreferences: {
       nodeIntegration: true,
       preload: __dirname + '/preload.js'
@@ -12,7 +12,7 @@ function createWindow() {
     autoHideMenuBar: true
   });
 
-  mainWindow.loadFile('index.html');
+  mainWindow.loadFile('./src/interface/index.html');
   mainWindow.webContents.openDevTools();
 }
 

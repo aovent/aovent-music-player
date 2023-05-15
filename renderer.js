@@ -12,7 +12,7 @@ window.api.receive('folderContentsResponse', (fileNames) => {
             container.append(audioDiv);
 
             let audio = document.createElement("audio");
-            audio.src = `folder/${item}`;
+            audio.src = `../../folder/${item}`;
             audioDiv.append(audio);
 
             audio.onloadeddata = () => {
@@ -38,14 +38,8 @@ window.api.receive('folderContentsResponse', (fileNames) => {
             buttonStop.classList.add("stop_button");
             buttonStop.innerHTML = "<i class='fa-solid fa-stop'></i>";
 
-            let buttonRestart = document.createElement("button");
-            buttonRestart.classList.add("restart_button");
-            buttonRestart.innerHTML = "<i class='fa-solid fa-reply'></i>";
-
             controlButtons.append(buttonPlay);
             controlButtons.append(buttonStop);
-            controlButtons.append(buttonRestart);
-
 
 
             let audioTime = document.createElement("div");
