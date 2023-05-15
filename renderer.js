@@ -32,15 +32,15 @@ window.api.receive('folderContentsResponse', (fileNames) => {
 
             let buttonPlay = document.createElement("button");
             buttonPlay.classList.add("play_button");
-            buttonPlay.innerHTML = "Play";
+            buttonPlay.innerHTML = "<i class='fa-solid fa-play'></i>";
 
             let buttonStop = document.createElement("button");
             buttonStop.classList.add("stop_button");
-            buttonStop.innerHTML = "Stop";
+            buttonStop.innerHTML = "<i class='fa-solid fa-stop'></i>";
 
             let buttonRestart = document.createElement("button");
             buttonRestart.classList.add("restart_button");
-            buttonRestart.innerHTML = "Restart";
+            buttonRestart.innerHTML = "<i class='fa-solid fa-reply'></i>";
 
             controlButtons.append(buttonPlay);
             controlButtons.append(buttonStop);
@@ -69,26 +69,22 @@ window.api.receive('folderContentsResponse', (fileNames) => {
 let timeoutId;
 let nowTime = 0;
 
-    // document.querySelector(".play_button").addEventListener("click", () => {
-    //     document.querySelector(".play_button").parentElement.parentElement.children[0].play();
-
-    //     const duration = Math.floor(document.querySelector(".play_button").parentElement.parentElement.children[0].duration);
-    //     playScroller(duration);
-    // });
-
-    // document.querySelector(".stop_button").addEventListener("click", () => {
-    //     document.querySelector(".play_button").parentElement.parentElement.children[0].pause();
-    //     clearTimeout(timeoutId);
-    // });
-
-
 setTimeout(() => {
     document.querySelectorAll(".play_button").forEach(element => element.addEventListener("click", () => {
-        element.parentElement.parentElement.querySelector(".duration_scroller").style.transform = `translateX(0px)`;
-        element.parentElement.parentElement.children[0].play();
+        setTimeout(() => {
+            document.querySelectorAll(".play_button").forEach(element => {
+                nowTime = 0;
     
-        const duration = Math.floor(element.parentElement.parentElement.children[0].duration);
-        playScroller(element, duration);
+                element.parentElement.parentElement.children[0].currentTime = Math.floor(element.parentElement.parentElement.children[0].duration) + 1;
+                element.parentElement.parentElement.querySelector(".audio_time").innerHTML = "0:00";
+                element.parentElement.parentElement.querySelector(".duration_scroller").style.transform = `translateX(${nowTime}px)`;
+            });
+        }, 200)
+
+        setTimeout(() => {
+            const duration = Math.floor(element.parentElement.parentElement.children[0].duration);
+            playScroller(element, duration);
+        }, 1000)
     }))
 
     document.querySelectorAll(".stop_button").forEach(element => element.addEventListener("click", () => {
@@ -98,6 +94,8 @@ setTimeout(() => {
 }, 201) 
 
     function playScroller(element, duration) {
+        element.parentElement.parentElement.children[0].play();
+
         let timeOutHTML = element.parentElement.parentElement.querySelector(".audio_time");
         let durationScroller = element.parentElement.parentElement.querySelector(".duration_scroller");
         clearTimeout(timeoutId);
@@ -115,11 +113,25 @@ setTimeout(() => {
             
 
             durationScroller.style.transform = `translateX(${nowTime}px)`;
-            nowTime++;
+            nowTime++;  
+
+            if (nowTime == duration + 1) {  
+                setTimeout(() => {
+                    nowTime = 0;
+
+                    durationScroller.style.transform = `translateX(${nowTime}px)`;
+
+                    element.parentElement.parentElement.children[0].play()
+
+                    timeOutHTML.innerHTML = "0:00"
+
+                    playScroller(element, duration);
+                }, 1010)
+            }
 
             if (nowTime <= duration) {
                 timeoutId = setTimeout(updateScroller, 1000);
-            }
+            } 
         }
 
         updateScroller();
