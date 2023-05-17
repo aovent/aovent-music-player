@@ -1,7 +1,7 @@
 <div align = "center" style = "width: 10vh;">
     <img src = "./src/img/aovent.png">
     <br>
-    <div style = "font-size: 10vh; color: transparent;-webkit-background-clip: text;background-clip: text;background-image: linear-gradient(45deg, #BAAFFF, fuchsia);">Aovent Music Player</div>
+    <div style = "font-size: 60px; color: transparent;-webkit-background-clip: text;background-clip: text;background-image: linear-gradient(45deg, #BAAFFF, fuchsia);">Aovent Music Player</div>
 </div>
 
 # How to install
