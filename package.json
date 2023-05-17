@@ -1,16 +1,34 @@
 {
   "name": "music-player",
   "version": "1.0.0",
-  "description": "",
+  "description": "Aovent Music Player",
   "main": "index.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "electron": "^24.3.0",
     "fs": "^0.0.1-security"
+  },
+  "build": {
+    "appId": "aovent.music.player.0002",
+    "productName": "Aovent MP",
+    "win": {
+      "icon": "./src/img/aovent.png"
+    },
+    "mac": {
+      "icon": "./src/img/aovent.png"
+    },
+    "linux": {
+      "icon": "./src/img/aovent.png"
+    }
+  },
+  "devDependencies": {
+    "electron-builder": "^23.6.0",
+    "electron": "^24.3.0"
   }
 }

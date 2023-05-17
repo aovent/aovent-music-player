@@ -9,7 +9,8 @@ function createWindow() {
       nodeIntegration: true,
       preload: __dirname + '/common/preload.js'
     },
-    autoHideMenuBar: true
+    autoHideMenuBar: true,
+    title: "Aovent MP"
   });
 
   mainWindow.loadFile('./src/interface/index.html');
