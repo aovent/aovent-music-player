@@ -6,7 +6,7 @@ export function playerTrackNameSet(selector, audio) {
 }
 
 function startingPlay(audio, audioTag) {
-    console.log(12);
+    const scrollbar = document.querySelector(".scrollbar_passive");
 
     // Reset Scrollbar
     clearScrollbar(scrollbar);
