@@ -4,9 +4,7 @@
 Music Player On Electron JS
 
 # How to install
-
-# First 
-## Clone This Repo
+**First** 
  * type `git clone https://github.com/aovent/web-music-player.git`
  * type `npm install`
  * load your tracks in `folder`
