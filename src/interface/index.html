@@ -7,21 +7,56 @@
 
     <link rel="stylesheet" href="index.css">
 
-    <script src="../../renderer.js" defer></script>
+    <script src="../../common/renderer.js" defer type="module"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <main>
-        <div class="logo">
-            <img src="../img/aovent.png" draggable="false">
-        </div>
 
-        <div id = "container"></div>
+        <section class="title">
+            <img src="../img/aovent.png" draggable="false" class="logo">
+            <p>Aovent Music Player</p>
+        </section>
+
+        <section class="audio_section">
+            
+        </section>
+
+        <section class="player_section">
+            <div class="player_audio_stats">
+                <div class="player_audio_name">
+                    <p>Name</p>
+                    <p class = "line-margin">-</p>
+                    <p>Author</p>
+                </div>
+            </div>
+            <div class="player_scrollbar">
+                <section class="scrollbar_passive">
+                    <span class="scrollbar_active"></span>
+                </div>
+            </div>
+            <div class="player_buttons">
+                <button class="player_previous">
+                    <i class="fa-solid fa-backward"></i>
+                </button>
+                <button class="player_play">
+                    <i class="fa-solid fa-play"></i>
+                </button>
+                <button class="player_stop">
+                    <i class="fa-solid fa-stop"></i>
+                </button>
+                <button class="player_next">
+                    <i class="fa-solid fa-forward"></i>
+                </button>
+            </div>
+        </section>
     </main>
 </body>
 </html>

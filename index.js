@@ -7,7 +7,7 @@ function createWindow() {
     icon: "src/img/aovent.png",
     webPreferences: {
       nodeIntegration: true,
-      preload: __dirname + '/preload.js'
+      preload: __dirname + '/common/preload.js'
     },
     autoHideMenuBar: true
   });
