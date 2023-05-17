@@ -1,6 +1,6 @@
 {
   "name": "music-player",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Aovent Music Player",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,14 @@
     "appId": "aovent.music.player.0002",
     "productName": "Aovent MP",
     "win": {
-      "icon": "./src/img/aovent.png"
+      "icon": "./src/img/aovent.png",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./src/img/aovent.png",
+      "license": "./license.txt"
     },
     "mac": {
       "icon": "./src/img/aovent.png"

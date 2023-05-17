@@ -4,8 +4,24 @@
 Music Player On Electron JS
 
 # How to install
-**First** 
+**Clone Repo** 
  * type `git clone https://github.com/aovent/web-music-player.git`
  * type `npm install`
  * load your tracks in `folder`
  * type `npm start`
+
+**Build Program**
+ * type `git clone https://github.com/aovent/web-music-player.git`
+ * type `npm run dist`
+ * run `Aovent MP Setup 1.0.0.exe`
+ * delete `web-music-player-main` (or other downloaded folder)
+ * create in player folder directory `folder`
+ * load in this directory your music
+ * run `Aovent MP.exe`
+
+**Download Release**
+ * download zip archive from [this]()
+ * run `Aovent MP Setup 1.0.0.exe`
+ * create in player folder directory `folder`
+ * load in this directory your music
+ * run `Aovent MP.exe`

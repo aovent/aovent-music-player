@@ -1,3 +1,5 @@
+import { stopAllMusic, playMusic } from "./audioControls.js";
+
 let timeoutId;
 
 export function playerTrackNameSet(selector, audio) {
@@ -7,12 +9,18 @@ export function playerTrackNameSet(selector, audio) {
 
 function startingPlay(audio, audioTag) {
     const scrollbar = document.querySelector(".scrollbar_passive");
+    const trackNameSection = document.querySelector(".player_audio_name");
 
     // Reset Scrollbar
     clearScrollbar(scrollbar);
 
     // Stop All Audios
-    stopAllMusic(allAudioDivs);
+    let allAudioDivs;
+
+    setTimeout(() => {
+        allAudioDivs = document.querySelectorAll(".audio_div");
+        stopAllMusic(allAudioDivs);
+    }, 200)
 
     // Start Functions
     clearRecursion();
@@ -62,15 +70,25 @@ export function stopScrollbar() {
 }
 
 function nextTrackAuto() {
-    const allAudioDivs = document.querySelectorAll(".audio_div");
+    let allAudioDivs;
 
-    allAudioDivs.forEach((item, index) => {
-        if(document.querySelector(".player_audio_name").children[0].innerHTML == item.children[0].textContent.trim().split(" - ")[1] && document.querySelector(".player_audio_name").children[2].innerHTML == item.children[0].textContent.trim().split(" - ")[0]) {
-            if (index + 1 == allAudioDivs.length) {
-                startingPlay(allAudioDivs[0], allAudioDivs[0].children[2])
-            } else {
-                startingPlay(allAudioDivs[index + 1], allAudioDivs[index + 1].children[2])
-            }
-        } 
-    })
+    setTimeout(() => {
+        allAudioDivs = document.querySelectorAll(".audio_div");
+
+        allAudioDivs.forEach((item, index) => {
+            if(document.querySelector(".player_audio_name").children[0].innerHTML == item.children[0].textContent.trim().split(" - ")[1] && document.querySelector(".player_audio_name").children[2].innerHTML == item.children[0].textContent.trim().split(" - ")[0]) {
+                if (index + 1 == allAudioDivs.length) {
+                    setTimeout(() => {
+                        startingPlay(allAudioDivs[0], allAudioDivs[0].children[2])
+                        setTimeout(() => {playMusic(allAudioDivs[0].children[2]);}, 201);
+                    }, 201)
+                } else {
+                    setTimeout(() => {
+                        startingPlay(allAudioDivs[index + 1], allAudioDivs[index + 1].children[2])
+                        setTimeout(() => {playMusic(allAudioDivs[index + 1].children[2]);}, 201);
+                    }, 201)
+                }
+            } 
+        })
+    }, 200)
 }
