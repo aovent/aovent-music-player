@@ -26,8 +26,6 @@ window.addEventListener('DOMContentLoaded', () => {
 window.api.receive('folderContentsResponse', (fileNames) => {
     fileNames.split("=/=").forEach((item, index) => {
         if (index != fileNames.split("=/=").length - 1) {
-            // `../../folder/${item}`
-
             let audioDiv = document.createElement("div");
             audioDiv.classList.add("audio_div");
             container.append(audioDiv);
@@ -47,6 +45,10 @@ window.api.receive('folderContentsResponse', (fileNames) => {
             audioTag.src = `../../folder/${item}`;
             audioTag.classList.add("audio_audio");
             audioDiv.append(audioTag);
+
+            setTimeout(() => {
+                audioDuration.innerHTML = `${(Math.trunc(audioTag.duration) / 60).toFixed(2).split(".")[0]}:${(Math.trunc(audioTag.duration) / 60).toFixed(2).split(".")[1]}`;
+            }, 200)
         }
     });
 
