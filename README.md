@@ -1,7 +1,8 @@
-<div align = "center" style = "width: 10vh;"><img src = "./src/img/aovent.png"></div>
-
-# web-music-player
-Music Player On Electron JS
+<div align = "center" style = "width: 10vh;">
+    <img src = "./src/img/aovent.png">
+    <br>
+    <div style = "color: transparent;-webkit-background-clip: text;background-clip: text;background-image: linear-gradient(45deg, #BAAFFF, fuchsia);">Aovent Music Player</div>
+</div>
 
 # How to install
 
