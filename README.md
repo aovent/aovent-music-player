@@ -6,7 +6,9 @@ Music Player On Electron JS
 # How to install
 
 **~~~**
+
 Do not forget to create in the root of the folder `folder`, where you want to add tracks. Do not forget that the names of the tracks must be in the format `authorname-songname`.  
+
 **~~~**
 
 **Clone Repo** 
