@@ -48,7 +48,7 @@ window.api.receive('folderContentsResponse', (fileNames) => {
 
             setTimeout(() => {
                 audioDuration.innerHTML = `${(Math.trunc(audioTag.duration) / 60).toFixed(2).split(".")[0]}:${(Math.trunc(audioTag.duration) / 60).toFixed(2).split(".")[1]}`;
-            }, 200)
+            }, 400)
         }
     });
 

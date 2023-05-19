@@ -51,44 +51,6 @@ main {
     margin-bottom: 5vh;
 }
 
-.logo {
-    width: 10vh;
-}
-
-.audio_section {
-    margin: 5vh 0;
-
-    margin-bottom: 5vh;
-}
-
-.audio_div {
-    padding: 1vh;
-
-    margin: 3vh 0;
-
-    background: var(--submenus);
-
-    border-radius: var(--br);
-
-
-    display: flex;
-    justify-content: space-between;
-
-    min-width: 40vh;
-
-    cursor: pointer;
-}
-
-.audio_div:hover {
-    color: var(--hover-color1);
-    background: var(--menus);
-
-    box-shadow: 0 0 2vh 0.5vh var(--hover-color1);
-
-    transition: 0.3s;
-}
-
-
 .player_section {
     position: absolute;
 
@@ -194,6 +156,46 @@ main {
 
     transition: 0.6s;
 }
+
+
+.logo {
+    width: 10vh;
+}
+
+.audio_section {
+    margin: 5vh 0;
+
+    margin-bottom: 5vh;
+}
+
+.audio_div {
+    padding: 1vh;
+
+    margin: 3vh 0;
+
+    background: var(--submenus);
+
+    border-radius: var(--br);
+
+
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 40vh;
+
+    cursor: pointer;
+}
+
+.audio_div:hover {
+    color: var(--hover-color1);
+    background: var(--menus);
+
+    box-shadow: 0 0 2vh 0.5vh var(--hover-color1);
+
+    transition: 0.3s;
+}
+
+
 
 .line-margin {
     margin: 0 1vh;
