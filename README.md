@@ -28,7 +28,7 @@ Do not forget to create in the root of the folder `folder`, where you want to ad
  * run `Aovent MP.exe`
 
 **Download Release**
- * download installer from [this](https://github.com/aovent/web-music-player/releases/tag/1.0.0)
+ * download installer from [this](https://github.com/aovent/aovent-music-player/releases/tag/2.1.2)
  * run installer
  * create in player folder directory `folder`
  * load in this directory your music
