@@ -1,4 +1,4 @@
-const { readdirSync } = require('fs');
+const { readdirSync, realpath } = require('fs');
 const { ipcRenderer, contextBridge } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
